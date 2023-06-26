@@ -1,0 +1,13 @@
+#The "aws-iot-device-sdk-port" layer includes the "coreHTTP" and "coreMQTT" modules of the "aws-iot-device-sdk-embedded-C" library #by default. If the user application doesn't use MQTT client features, add the following path in the .cyignore file of the #application to exclude the coreMQTT source files from the build.
+
+$(SEARCH_aws-iot-device-sdk-embedded-C)/libraries/standard/coreMQTT
+libs/aws-iot-device-sdk-embedded-C/libraries/standard/coreMQTT
+
+# Documentation
+images
+
+# Exports, Project settings
+.mtbLaunchConfigs
+.settings
+.vscode
+
