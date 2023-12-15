@@ -54,7 +54,7 @@
 #define RAM_SIZE                0x000DF800
 ; Flash
 #define FLASH_START             0x10000000
-#define FLASH_SIZE              0x00100000
+#define FLASH_SIZE              0x00138000
 
 ; The size of the stack section at the end of CM4 SRAM
 #define STACK_SIZE              0x00001000
