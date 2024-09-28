@@ -309,7 +309,7 @@ static cy_rslt_t configure_https_client(void)
 
     /* Create an instance of the HTTP client. */
     result = cy_http_client_create(&security_config, &server_info, http_cb, NULL, &https_client);
-    
+
     if( result != CY_RSLT_SUCCESS )
     {
         /* Failure path */
@@ -476,4 +476,3 @@ void http_request(void)
     }
 }
 /* [] END OF FILE */
-

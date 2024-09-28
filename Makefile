@@ -47,6 +47,7 @@ TARGET=CY8CPROTO-062S2-43439
 # If APPNAME is edited, ensure to update or regenerate launch
 # configurations for your IDE.
 APPNAME=mtb-example-wifi-https-client
+
 # Name of toolchain to use. Options include:
 #
 # GCC_ARM -- GCC provided with ModusToolbox software
@@ -68,7 +69,6 @@ CONFIG=Debug
 
 # If set to "true" or "1", display full command-lines when building.
 VERBOSE=
-
 
 ################################################################################
 # Advanced Configuration
@@ -114,11 +114,14 @@ DEFINES=$(MBEDTLSFLAGS) CYBSP_WIFI_CAPABLE CY_RETARGET_IO_CONVERT_LF_TO_CRLF CY_
 # If you want this feature on CY8CPROTO-062-4343W, change the GPIO pin for USER BTN
 # in design/hardware & Comment DEFINES+=CY_WIFI_HOST_WAKE_SW_FORCE=0.
 DEFINES+=CY_WIFI_HOST_WAKE_SW_FORCE=0
- 
-#Define the following macro in the application's Makefile to mandatorily disable the custom 
-#configuration header file.
-DEFINES += HTTP_DO_NOT_USE_CUSTOM_CONFIG
-DEFINES += MQTT_DO_NOT_USE_CUSTOM_CONFIG
+
+# Define the following macro in the application's Makefile to mandatorily disable the custom 
+# configuration header file.
+DEFINES+=HTTP_DO_NOT_USE_CUSTOM_CONFIG
+DEFINES+=MQTT_DO_NOT_USE_CUSTOM_CONFIG
+
+#Disabled D-cache for XMC7000 based BSPs
+DEFINES+=CY_DISABLE_XMC7000_DATA_CACHE
 
 # Select softfp or hardfp floating point. Default is softfp.
 VFP_SELECT=
